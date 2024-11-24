@@ -14,7 +14,7 @@
 
 @media (max-width: 1287px) {
   .page {
-    margin-bottom: 20px;
+    height: auto;
   }
 }
 
@@ -104,6 +104,7 @@
     margin-top: -150px;
     width: 280px;
     z-index: 10;
+    margin-bottom: 48px;
   }
   .label {
     font-family: 'Poppins';
