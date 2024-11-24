@@ -2,7 +2,7 @@
   "name": "erec-2025",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jeremiahbintang.github.io/erec-2025/",
+  "homepage": "https://erec.irec-europe.org/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

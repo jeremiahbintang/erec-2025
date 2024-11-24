@@ -18,7 +18,7 @@ export default function Details() {
               fill
               objectFit="contain"
               alt="Arrow Circle Right"
-              src="/erec-2025/icons/arrowCircleRight.svg"
+              src="/icons/arrowCircleRight.svg"
             />
           </div>
         </a>
