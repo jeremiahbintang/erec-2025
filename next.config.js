@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/erec-2025',
+  assetPrefix: '/erec-2025/', // Same as basePath
 };
 
 module.exports = nextConfig;
