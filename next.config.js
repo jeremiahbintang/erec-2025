@@ -1,13 +1,13 @@
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+import { PHASE_DEVELOPMENT_SERVER } from 'next/constants.js';
 
-module.exports = (phase) => {
+export default (phase) => {
   const isDev = phase === PHASE_DEVELOPMENT_SERVER
   /**
    * @type {import('next').NextConfig}
    */
   const nextConfig = {
     output: 'export',
-    basePath: '/erec-2025',
+    basePath: isDev ? undefined : '/erec-2025',
     assetPrefix: isDev ? undefined : '/erec-2025/',
     images: {
       unoptimized: true, // For static exports, images must be unoptimized
