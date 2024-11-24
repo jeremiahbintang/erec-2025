@@ -2,12 +2,13 @@
   "name": "erec-2025",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jeremiahbintang.github.io/erec-2025/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "next build && touch out/.nojekyll && gh-pages -d ./out"
   },
   "dependencies": {
     "@mantine/carousel": "^7.4.1",
