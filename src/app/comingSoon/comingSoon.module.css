@@ -38,7 +38,7 @@
   flex-grow: 1;  
   position: relative;
   height: 100vh;
-  min-width : 768px;
+  /* min-width : 768px; */
 }
 
 @media (max-width: 1287px) {
@@ -172,9 +172,24 @@
 } */
 
 .arrowCircleRightIcon {
+
+  /* object-position: left bottom; */
+  /* object-fit: cover;   */
+  position: relative;
+  display: inline-block;
   vertical-align: middle;
   margin-left: 8px;
+  height: 40px;
+  width: 40px;
 }
+
+@media (max-width: 1287px) {
+  .arrowCircleRightIcon {  
+    height: 20px;
+    width: 20px;
+  }
+}
+
 
 .link:visited {
   color: var(--color-white);
