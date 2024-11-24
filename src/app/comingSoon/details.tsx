@@ -24,7 +24,7 @@ export default function Details() {
             height={40}
             className={styles.arrowCircleRightIcon}
             alt="Arrow Circle Right"
-            src="/icons/arrowCircleRight.svg"
+            src="/erec-2025/icons/arrowCircleRight.svg"
         />
         </a>
         </div>
