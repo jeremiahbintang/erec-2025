@@ -12,6 +12,12 @@
   flex-direction: column;
 }
 
+@media (max-width: 1287px) {
+  .page {
+    margin-bottom: 20px;
+  }
+}
+
 .heroContainer {
   flex: 1;
   display: flex;
