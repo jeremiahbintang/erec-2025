@@ -30,13 +30,13 @@ export default function Details() {
       />
       <div className={styles.label}>CONTACT</div>
       <div className={styles.contact}>
-        Jeremiah{" "}
+        Evan{" "}
         <a
           className={styles.link}
-          href="https://wa.me/+4915236823900"
+          href="https://wa.me/+4915147058172"
           target="_blank"
         >
-          +49 152 36823900
+          +49 1514 7058172
         </a>
       </div>
     </div>
