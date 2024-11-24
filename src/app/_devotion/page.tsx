@@ -1,10 +1,10 @@
-import Footer from "../footer/page";
-import Header from "../header/page";
-import MenuSidebar from "../menuSidebar/page";
+import Footer from "../_footer/page";
+import Header from "../_header/page";
+import MenuSidebar from "../_menuSidebar/page";
 import Content from "./content";
-import styles from "./pricing.module.css";
+import styles from "./devotion.module.css";
 
-export default function Pricing() {
+export default function Devotion() {
   return (
     <>
       <div className={styles.page}>

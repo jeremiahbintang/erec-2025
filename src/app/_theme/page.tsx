@@ -1,10 +1,10 @@
-import Footer from "../footer/page";
-import Header from "../header/page";
-import MenuSidebar from "../menuSidebar/page";
+import Footer from "../_footer/page";
+import Header from "../_header/page";
+import MenuSidebar from "../_menuSidebar/page";
 import Content from "./content";
-import styles from "./schedule.module.css";
+import styles from "./theme.module.css";
 
-export default function Schedule() {
+export default function Theme() {
   return (
     <>
       <div className={styles.page}>

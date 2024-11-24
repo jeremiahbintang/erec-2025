@@ -1,10 +1,10 @@
-import Footer from "../footer/page";
-import Header from "../header/page";
-import MenuSidebar from "../menuSidebar/page";
+import Footer from "../_footer/page";
+import Header from "../_header/page";
+import MenuSidebar from "../_menuSidebar/page";
 import Content from "./content";
-import styles from "./theme.module.css";
+import styles from "./speakers.module.css";
 
-export default function Theme() {
+export default function Speakers() {
   return (
     <>
       <div className={styles.page}>

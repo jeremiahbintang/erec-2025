@@ -1,9 +1,9 @@
 import styles from "./homePage.module.css";
 import TitleImage from "./titleImage";
 import Content from "./content";
-import MenuSidebar from "../menuSidebar/page";
-import Header from "../header/page";
-import Footer from "../footer/page";
+import MenuSidebar from "../_menuSidebar/page";
+import Header from "../_header/page";
+import Footer from "../_footer/page";
 
 export default function HomePage() {
   return (

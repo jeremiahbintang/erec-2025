@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./header.module.css";
 import Link from "next/link";
-import MenuBurger from "../menuBurger/page";
+import MenuBurger from "../_menuBurger/page";
 
 export default function Header() {
   return (
