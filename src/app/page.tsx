@@ -1,9 +1,9 @@
-import HomePage from "./homePage/page";
+import ComingSoon from "./comingSoon/page";
 
 export default function Home() {
   return (
     <>
-      <HomePage />
+      <ComingSoon />
     </>
   );
 }
