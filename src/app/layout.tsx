@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+// import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import styles from "./page.module.css";
+import NavBar from "@/app/components/navbar"
+import Footer from "@/app/components/footer"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,10 +48,14 @@ export default function RootLayout({
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
       <head>
-        <ColorSchemeScript />
+        {/* <ColorSchemeScript /> */}
       </head>
       <body className={styles.page}>
-        <MantineProvider>{children}</MantineProvider>
+        {/* <MantineProvider> */}
+          <NavBar />
+          {children}
+          <Footer />
+        {/* </MantineProvider> */}
         <Analytics />
         <SpeedInsights />
       </body>
