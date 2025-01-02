@@ -3,8 +3,8 @@ import styles from "./homePage.module.css";
 export default function HomePage() {
   return (
     <>
-      <div className="h-screen w-screen">
-        <div className="bg-[url('/hero-no-text.svg')] bg-no-repeat bg-over lg:bg-cover bg-bottom w-full lg:w-5/12 h-full place-self-center">
+      <div className="h-screen w-screen grid">
+        <div className="bg-[url('/hero-no-text.svg')] bg-no-repeat bg-over lg:bg-cover bg-bottom w-full lg:w-5/12 h-full self-center justify-self-center">
           <div className="flex flex-col justify-between gap-60 h-full items-center pt-36 pb-24">
             <div className="font-serif text-white uppercase leading-none text-center font-semibold">
               <div className="text-xl lg:text-5xl">The Gift of</div>
