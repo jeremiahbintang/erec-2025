@@ -29,7 +29,7 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        '8xl': '85rem',
+        '8xl': '90rem',
       },
       spacing: {
         '140': '35rem',

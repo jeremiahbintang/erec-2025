@@ -24,8 +24,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
         {/* Section 2 */}
-        <div className="max-w-8xl mx-10 pb-10 w-full">
+        <div className="max-w-8xl px-10 pb-10 lg:pb-32 w-full">
           <div className="mb-8 md:mb-10">
             <div className="font-sans text-white text-2xl md:text-4xl font-medium leading-none">
               European Reformed <br />
@@ -37,9 +38,12 @@ export default function HomePage() {
               fellowship as one body of Christ.
             </div>
           </div>
-          <div className="mb-10 md:mb-20 relative w-full h-40 sm:h-96 xl:h-140">
+          <div className="mb-10 md:mb-20 mx-[-2.5rem] lg:mx-0 relative w-screen lg:w-full h-80 lg:h-140">
             <Carousel>
-              <img src="/event-images/event1.png" />
+              <img
+                className="object-cover w-auto h-full"
+                src="/event-images/event1.png"
+              />
             </Carousel>
           </div>
           <div>
@@ -177,8 +181,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
- */}
+        </div> */}
       </div>
     </>
   );
