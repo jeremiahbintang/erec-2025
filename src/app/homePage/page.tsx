@@ -34,7 +34,7 @@ export default function HomePage() {
             </div>
             <div className="font-sans text-xs md:text-2xl pt-4 max-w-2xl">
               EREC is a yearly convention where congregation from IREC Europe
-              churches and beyond gather to learn of God's word and have a
+              churches and beyond gather to learn of God&apos;s word and have a
               fellowship as one body of Christ.
             </div>
           </div>
@@ -94,11 +94,11 @@ export default function HomePage() {
           </div>
           <div>
             <div>
-              These questions will be addressed at this year's European Reformed
+              These questions will be addressed at this year&apos;s European Reformed
               Evangelical Convention (EREC). The theme for this year is The Gift
               of Perseverance. Perseverance means maintaining the fire of faith
               in every season. This retreat is not just about a temporary boost;
-              it's about fostering a lasting commitment to your spiritual
+              it&apos;s about fostering a lasting commitment to your spiritual
               journey. Come and discover how to keep your inner fire burning
               brightly, ensuring that your faith remains strong and impactful in
               your everyday life. Join us and register now!
