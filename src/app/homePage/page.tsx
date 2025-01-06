@@ -5,9 +5,9 @@ import styles from "./homePage.module.css";
 export default function HomePage() {
   return (
     <>
-      <div>
+      <div className="w-full flex flex-col items-center">
         {/* Section 1 */}
-        <div className="h-screen w-full grid mb-20">
+        <div className="h-screen w-full grid mb-20 self-center block">
           <div className="bg-[url('/hero-no-text.svg')] bg-no-repeat bg-cover bg-bottom w-full md:w-9/12 lg:min-w-[650px] lg:w-5/12 h-full self-center justify-self-center">
             <div className="flex flex-col justify-between gap-60 h-full items-center pt-36 pb-24">
               <div className="font-serif text-white uppercase leading-none text-center font-semibold">
@@ -24,15 +24,14 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
         {/* Section 2 */}
-        <div className="max-w-8xl px-10 mb-10">
+        <div className="max-w-8xl mx-10 pb-10 w-full">
           <div className="mb-8 md:mb-10">
-            <div className="font-sans text-2xl md:text-4xl font-medium leading-none">
+            <div className="font-sans text-white text-2xl md:text-4xl font-medium leading-none">
               European Reformed <br />
               Evangelical Convention
             </div>
-            <div className="font-sans text-xs md:text-2xl pt-4 max-w-2xl">
+            <div className="font-sans text-white text-xs md:text-2xl pt-4 max-w-2xl">
               EREC is a yearly convention where congregation from IREC Europe
               churches and beyond gather to learn of God&apos;s word and have a
               fellowship as one body of Christ.
@@ -48,7 +47,7 @@ export default function HomePage() {
               When and where
             </div>
             <div className="flex justify-between flex-col lg:flex-row">
-              <div className="font-sans mb-5 lg:mb-auto">
+              <div className="font-sans mb-5 lg:mb-auto text-white">
                 <div className="text-3xl md:text-6xl font-medium">
                   18 to 21 April, 2025
                 </div>
@@ -77,33 +76,43 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        {/* <div>
-          <div>About</div>
-          <div>The Theme</div>
-          <div>
-            During special occasions like Christmas or retreats, we often
-            experience spiritual highs that ignite a passion to serve God in our
-            daily lives. However, this fervor can sometimes fade over time.
-          </div>
-          <div>
-            <div>The question then arises:</div>
-            <div>
-              How do we sustain that spiritual momentum? How do we persevere in
-              faith through all seasons?
+        {/* <div className="max-w-8xl bg-white pt-32 w-full flex items-center flex-col">
+          <div className="text-dark-slate-blue max-w-2xl text-center">
+            <div className="text-5xl leading-none font-semibold font-serif uppercase">
+              About
+            </div>
+            <div className="text-7xl leading-none font-semibold font-serif uppercase mb-6">
+              The Theme
+            </div>
+            <div className="text-base font-sans leading-loose">
+              During special occasions like Christmas or retreats, we often
+              experience spiritual highs that ignite a passion to serve God in
+              our daily lives. However, this fervor can sometimes fade over
+              time.
             </div>
           </div>
-          <div>
+          <div className="flex flex-col lg:flex-row">
             <div>
-              These questions will be addressed at this year&apos;s European Reformed
-              Evangelical Convention (EREC). The theme for this year is The Gift
-              of Perseverance. Perseverance means maintaining the fire of faith
-              in every season. This retreat is not just about a temporary boost;
-              it&apos;s about fostering a lasting commitment to your spiritual
-              journey. Come and discover how to keep your inner fire burning
-              brightly, ensuring that your faith remains strong and impactful in
-              your everyday life. Join us and register now!
+              <div>The question then arises:</div>
+              <div>
+                How do we sustain that spiritual momentum? How do we persevere
+                in faith through all seasons?
+              </div>
             </div>
-            <div>Register Now</div>
+            <div>
+              <div>
+                These questions will be addressed at this year&apos;s European
+                Reformed Evangelical Convention (EREC). The theme for this year
+                is The Gift of Perseverance. Perseverance means maintaining the
+                fire of faith in every season. This retreat is not just about a
+                temporary boost; it&apos;s about fostering a lasting commitment
+                to your spiritual journey. Come and discover how to keep your
+                inner fire burning brightly, ensuring that your faith remains
+                strong and impactful in your everyday life. Join us and register
+                now!
+              </div>
+              <div>Register Now</div>
+            </div>
           </div>
           <div>
             <div>Get to know some of the speakers</div>
@@ -168,7 +177,8 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
+ */}
       </div>
     </>
   );
