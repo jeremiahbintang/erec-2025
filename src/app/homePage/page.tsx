@@ -1,3 +1,5 @@
+import { Carousel } from "flowbite-react";
+
 import styles from "./homePage.module.css";
 
 export default function HomePage() {
@@ -5,7 +7,7 @@ export default function HomePage() {
     <>
       <div>
         {/* Section 1 */}
-        <div className="h-screen w-screen grid">
+        <div className="h-screen w-full grid mb-20">
           <div className="bg-[url('/hero-no-text.svg')] bg-no-repeat bg-cover bg-bottom w-full md:w-9/12 lg:min-w-[650px] lg:w-5/12 h-full self-center justify-self-center">
             <div className="flex flex-col justify-between gap-60 h-full items-center pt-36 pb-24">
               <div className="font-serif text-white uppercase leading-none text-center font-semibold">
@@ -24,36 +26,58 @@ export default function HomePage() {
         </div>
 
         {/* Section 2 */}
-        <div>
-          <div>
-            European Reformed <br />
-            Evangelical Convention
+        <div className="max-w-8xl px-10 mb-10">
+          <div className="mb-8 md:mb-10">
+            <div className="font-sans text-2xl md:text-4xl font-medium leading-none">
+              European Reformed <br />
+              Evangelical Convention
+            </div>
+            <div className="font-sans text-xs md:text-2xl pt-4 max-w-2xl">
+              EREC is a yearly convention where congregation from IREC Europe
+              churches and beyond gather to learn of God's word and have a
+              fellowship as one body of Christ.
+            </div>
+          </div>
+          <div className="mb-10 md:mb-20 relative w-full h-40 sm:h-96 xl:h-140">
+            <Carousel>
+              <img src="/event-images/event1.png" />
+            </Carousel>
           </div>
           <div>
-            EREC is a yearly convention where congregation from IREC Europe
-            churches and beyond gather to learn of God's word and have a
-            fellowship as one body of Christ.
+            <div className="font-serif uppercase text-orange font-bold size-2xl">
+              When and where
+            </div>
+            <div className="flex justify-between flex-col lg:flex-row">
+              <div className="font-sans mb-5 lg:mb-auto">
+                <div className="text-3xl md:text-6xl font-medium">
+                  18 to 21 April, 2025
+                </div>
+                <div className="text-base md:text-3xl font-medium leading-normal">
+                  DJH Jugendherberge Halle,
+                  <br />
+                  Große Steinstraße 60,
+                  <br />
+                  06108 Halle (Saale), Germany
+                </div>
+              </div>
+              <div className="relative w-full lg:w-auto">
+                <img className="rounded-2xl w-full lg:w-auto" src="/map.png" />
+                <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                  <a
+                    href="https://maps.app.goo.gl/yQFEPraEG2cXXwiy6"
+                    className="text-xs lg:text-base px-4 h-10 w-max uppercase text-dark-slate-blue border-dark-slate-blue border-2 font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
+                    target="_blank"
+                  >
+                    <p className="lg:hidden">Google Maps</p>
+                    <p className="hidden lg:block">View on Google Maps</p>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="/event-images/event1.png" />
-        </div>
-        <div>
-          <div>When and where</div>
-          <div>18 to 21 April, 2025</div>
-          <div>
-            DJH Jugendherberge Halle,
-            <br />
-            Große Steinstraße 60,
-            <br />
-            06108 Halle (Saale), Germany
-          </div>
-          <div>
-            <img src="/map.png" />
-            <button>View on Google Maps</button>
-          </div>
-        </div>
-        <div>
+        {/* Section 3 */}
+        {/* <div>
           <div>About</div>
           <div>The Theme</div>
           <div>
@@ -81,7 +105,70 @@ export default function HomePage() {
             </div>
             <div>Register Now</div>
           </div>
-        </div>
+          <div>
+            <div>Get to know some of the speakers</div>
+            <div>
+              <div>Rev. Jack Kawira</div>
+              <div>About Jack Kawira</div>
+            </div>
+          </div>
+          <div>Pricing</div>
+          <div>
+            The prices below include accommodation and meals. Towels are
+            available for an additional EUR 1.50.
+          </div>
+          <div>
+            <div>
+              <div>
+                <div>Adult</div>
+                <div>Early bird (Until 31 Jan 2025)</div>
+              </div>
+              <div>
+                <div>EUR</div>
+                <div>190</div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>Adult</div>
+              </div>
+              <div>
+                <div>EUR</div>
+                <div>215</div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>11-17</div>
+                <div>Years Old</div>
+              </div>
+              <div>
+                <div>EUR</div>
+                <div>130</div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>3-10</div>
+                <div>Years Old</div>
+              </div>
+              <div>
+                <div>EUR</div>
+                <div>105</div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>0-2</div>
+                <div>Years Old</div>
+              </div>
+              <div>
+                <div>EUR</div>
+                <div>60</div>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   );

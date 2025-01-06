@@ -8,8 +8,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import styles from "./page.module.css";
-import NavBar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
+import NavBar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,14 +47,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
-      <head>
-        {/* <ColorSchemeScript /> */}
-      </head>
+      <head>{/* <ColorSchemeScript /> */}</head>
       <body className={styles.page}>
         {/* <MantineProvider> */}
-          <NavBar />
-          {children}
-          <Footer />
+        <NavBar />
+        {children}
+        <Footer />
         {/* </MantineProvider> */}
         <Analytics />
         <SpeedInsights />
