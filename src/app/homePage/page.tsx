@@ -1,7 +1,23 @@
-import { Carousel } from "flowbite-react";
-
+import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
+import Image from "next/image";
 import styles from "./homePage.module.css";
-
+const customTheme: CustomFlowbiteTheme["carousel"] = {
+  scrollContainer: {
+    base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none lg:rounded-lg",
+    snap: "snap-x",
+  },
+};
+function RegisterButton() {
+  return (
+    <a
+      href="https://bit.ly/EREC2025"
+      target="_blank"
+      className="w-fit text-xs lg:text-xl bg-orange px-6 lg:px-10 h-10 lg:h-16 uppercase text-white font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
+    >
+      Register Now
+    </a>
+  );
+}
 export default function HomePage() {
   return (
     <>
@@ -14,13 +30,7 @@ export default function HomePage() {
                 <div className="text-xl lg:text-5xl">The Gift of</div>
                 <div className="text-3xl lg:text-7xl">Perseverance</div>
               </div>
-              <a
-                href="https://bit.ly/EREC2025"
-                target="_blank"
-                className="text-xs lg:text-xl bg-orange px-6 lg:px-10 h-10 lg:h-16 uppercase text-white font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
-              >
-                Register Now
-              </a>
+              <RegisterButton />
             </div>
           </div>
         </div>
@@ -38,11 +48,42 @@ export default function HomePage() {
               fellowship as one body of Christ.
             </div>
           </div>
-          <div className="mb-10 md:mb-20 mx-[-2.5rem] lg:mx-0 relative w-screen lg:w-full h-80 lg:h-140">
-            <Carousel>
-              <img
-                className="object-cover w-auto h-full"
+          <div className="mb-10 md:mb-20 mx-[-2.5rem] lg:mx-0 relative rounded-none w-screen lg:w-full h-80 lg:h-140">
+            <Carousel theme={customTheme}>
+              <Image
+                className="object-cover w-auto h-full lg:h-auto lg:w-full rounded-none"
                 src="/event-images/event1.png"
+                alt="seminar"
+                width={1920}
+                height={1080}
+              />
+              <Image
+                className="object-cover w-auto h-full lg:h-auto lg:w-full"
+                src="/event-images/event2.png"
+                alt="group photo"
+                width={1920}
+                height={1080}
+              />
+              <Image
+                className="object-cover w-auto h-full lg:h-auto lg:w-full"
+                src="/event-images/event3.png"
+                alt="kids"
+                width={1920}
+                height={1080}
+              />
+              <Image
+                className="object-cover w-auto h-full lg:h-auto lg:w-full"
+                src="/event-images/event4.png"
+                alt="sunday school"
+                width={1920}
+                height={1080}
+              />
+              <Image
+                className="object-cover w-auto h-full lg:h-auto lg:w-full"
+                src="/event-images/event5.png"
+                alt="choir"
+                width={1920}
+                height={1080}
               />
             </Carousel>
           </div>
@@ -80,12 +121,12 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        {/* <div className="max-w-8xl bg-white pt-32 w-full flex items-center flex-col">
-          <div className="text-dark-slate-blue max-w-2xl text-center">
-            <div className="text-5xl leading-none font-semibold font-serif uppercase">
+        <div className="max-w-8xl bg-white px-10 py-10 lg:py-32 w-full flex items-center flex-col">
+          <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
+            <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
               About
             </div>
-            <div className="text-7xl leading-none font-semibold font-serif uppercase mb-6">
+            <div className="text-2xl lg:text-7xl leading-none font-bold lg:font-semibold font-serif uppercase mb-6">
               The Theme
             </div>
             <div className="text-base font-sans leading-loose">
@@ -95,16 +136,18 @@ export default function HomePage() {
               time.
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row">
-            <div>
-              <div>The question then arises:</div>
-              <div>
+          <div className="flex flex-col w-full font-sans lg:flex-row text-dark-slate-blue gap-6 lg:gap-24">
+            <div className="font-medium lg:basis-1/2">
+              <div className="text-base lg:text-3xl">
+                The question then arises:
+              </div>
+              <div className="text-3xl lg:text-6xl leading-tight">
                 How do we sustain that spiritual momentum? How do we persevere
                 in faith through all seasons?
               </div>
             </div>
-            <div>
-              <div>
+            <div className="lg:basis-1/2">
+              <div className="text-base lg:text-2xl leading-relaxed mb-6">
                 These questions will be addressed at this year&apos;s European
                 Reformed Evangelical Convention (EREC). The theme for this year
                 is The Gift of Perseverance. Perseverance means maintaining the
@@ -115,10 +158,10 @@ export default function HomePage() {
                 strong and impactful in your everyday life. Join us and register
                 now!
               </div>
-              <div>Register Now</div>
+              <RegisterButton />
             </div>
           </div>
-          <div>
+          {/* <div className="bg-dark-slate-blue rounded-2xl w-full">
             <div>Get to know some of the speakers</div>
             <div>
               <div>Rev. Jack Kawira</div>
@@ -180,8 +223,8 @@ export default function HomePage() {
                 <div>60</div>
               </div>
             </div>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
       </div>
     </>
   );
