@@ -1,6 +1,8 @@
+"use client";
 import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 import Image from "next/image";
 import styles from "./homePage.module.css";
+import { useState } from "react";
 const customTheme: CustomFlowbiteTheme["carousel"] = {
   scrollContainer: {
     base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none lg:rounded-lg",
@@ -19,6 +21,17 @@ function RegisterButton() {
   );
 }
 export default function HomePage() {
+  const [speaker, SetSpeaker] = useState("billy");
+  const speakerDescriptions = {
+    billy: `Teaches systematic theology at the International Reformed Evangelical Seminary Jakarta and serves on the World Reformed Fellowship's theological commission. With 24 years of pastoral experience, he's authored "Ajarlah Kami Bertumbuh" and "Sola Dei Gloria." His research spans soteriology, anthropology, spirituality, John Calvin's theology, and J.S. Bach. Find his sermons on the "Sola Dei Gloria" YouTube channel.`,
+    jack: `Rev. Jack David Kawira is a pastor at the Reformed Evangelical Church of Indonesia (GRII) and a lecturer at the International Reformed Evangelical Seminary (STTRII) in Jakarta. He holds an S.E. from Institut Bisnis dan Informatika Indonesia, an M.Th. from STTRII Jakarta, and an M.A. from Theologische Universiteit Kampen, Netherlands, and is currently pursuing his Ph.D. at Vrije Universiteit Amsterdam.`,
+    leo: `First came to GRII in 2003 while taking his Design Bachelor's Degree at UPH Karawaci. From then on, with the growing urge and calling to serve God as His servant, he continued to serve in youth ministry of GRII Karawaci up until 2012 when he entered STTRII Jakarta. He received his Master of Theology in 2015, and has since served as an assistant pastor; from 2015-2018 in GRII Bintaro, and in 2018-2021 in both GRII Solo and GRII Yogyakarta. At the moment, he is continuing his doctoral study in Theologische Universiteit Apeldoorn, Netherlands.`,
+  };
+  const speakerNames = {
+    billy: `Rev. Billy Kristanto, Ph.D`,
+    jack: `Rev. Jack Kawira`,
+    leo: `Vic. Leonardo Chandra`,
+  };
   return (
     <>
       <div className="w-full flex flex-col items-center">
@@ -136,7 +149,7 @@ export default function HomePage() {
               time.
             </div>
           </div>
-          <div className="flex flex-col w-full font-sans lg:flex-row text-dark-slate-blue gap-6 lg:gap-24">
+          <div className="flex flex-col w-full font-sans lg:flex-row text-dark-slate-blue gap-6 lg:gap-24 mb-12">
             <div className="font-medium lg:basis-1/2">
               <div className="text-base lg:text-3xl">
                 The question then arises:
@@ -161,69 +174,196 @@ export default function HomePage() {
               <RegisterButton />
             </div>
           </div>
-          {/* <div className="bg-dark-slate-blue rounded-2xl w-full">
-            <div>Get to know some of the speakers</div>
-            <div>
-              <div>Rev. Jack Kawira</div>
-              <div>About Jack Kawira</div>
+          <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-row lg:items-center lg:justify-between">
+            <div className="text-white w-full lg:w-105">
+              <div className="font-medium text-3xl lg:text-6xl leading-tight mb-8">
+                Get to know
+                <br />
+                some of
+                <br />
+                the speakers
+              </div>
+              <div className="h-128 font-sans lg:hidden">
+                <Carousel>
+                  <div className="h-full">
+                    <Image
+                      className="object-cover w-30 h-30 rounded-full  mb-4"
+                      src="/speakers/billy.png"
+                      alt="seminar"
+                      width={1920}
+                      height={1080}
+                    />
+                    <div className="font-medium">{speakerNames.billy}</div>
+                    <div className="text-xs">{speakerDescriptions.billy}</div>
+                  </div>
+                  <div className="h-full">
+                    <Image
+                      className="object-cover w-30 h-30 rounded-full mb-4"
+                      src="/speakers/jack.png"
+                      alt="group photo"
+                      width={1920}
+                      height={1080}
+                    />
+                    <div className="font-medium">{speakerNames.jack}</div>
+                    <div className="text-xs">{speakerDescriptions.jack}</div>
+                  </div>
+                  <div className="h-full">
+                    <Image
+                      className="object-cover w-30 h-30 rounded-full mb-4"
+                      src="/speakers/leo.png"
+                      alt="kids"
+                      width={1920}
+                      height={1080}
+                    />
+                    <div className="font-medium">{speakerNames.leo}</div>
+                    <div className="text-xs">{speakerDescriptions.leo}</div>
+                  </div>
+                </Carousel>
+              </div>
+              <div className="flex-row gap-5 hidden lg:flex">
+                <div
+                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                    speaker == "billy" && "opacity-40 ring-10 ring-white"
+                  }`}
+                  onClick={() => SetSpeaker("billy")}
+                >
+                  <Image
+                    src="/speakers/billy.png"
+                    className={`rounded-full object-cover scale-125 translate-y-3`}
+                    alt="billy"
+                    fill
+                  />
+                  {speaker != "billy" && (
+                    <div
+                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                    />
+                  )}
+                </div>
+
+                <div
+                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                    speaker == "jack" && "opacity-40 ring-10 ring-white"
+                  }`}
+                  onClick={() => SetSpeaker("jack")}
+                >
+                  <Image
+                    src="/speakers/jack.png"
+                    className={`rounded-full object-cover scale-150`}
+                    alt="jack"
+                    fill
+                  />
+                  {speaker != "jack" && (
+                    <div
+                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                    />
+                  )}
+                </div>
+                <div
+                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                    speaker == "leo" && "opacity-40 ring-10 ring-white"
+                  }`}
+                  onClick={() => SetSpeaker("leo")}
+                >
+                  <Image
+                    src="/speakers/leo.png"
+                    className={`rounded-full object-cover scale-125`}
+                    alt="leo"
+                    fill
+                  />
+                  {speaker != "leo" && (
+                    <div
+                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
+            <div className="relative hidden lg:block">
+              <div className="relative w-120 h-160 bg-white rounded-2xl z-10 text-dark-slate-blue p-10">
+                <div className="w-50 h-50 relative rounded-full overflow-hidden mb-10">
+                  <Image
+                    src={`/speakers/${speaker}.png`}
+                    className="object-cover rounded-full scale-125 translate-y-3"
+                    fill
+                    alt={speaker}
+                  />
+                </div>
+                <div className="font-medium text-3xl mb-2">
+                  {speaker == "billy"
+                    ? speakerNames.billy
+                    : speaker == "jack"
+                    ? speakerNames.jack
+                    : speakerNames.leo}
+                </div>
+                <div>
+                  {speaker == "billy"
+                    ? speakerDescriptions.billy
+                    : speaker == "jack"
+                    ? speakerDescriptions.jack
+                    : speakerDescriptions.leo}
+                </div>
+              </div>
+              <div className="absolute top-3 left-12 w-120 h-154 bg-light-gray rounded-2xl z-0"></div>
             </div>
           </div>
-          <div>Pricing</div>
-          <div>
-            The prices below include accommodation and meals. Towels are
-            available for an additional EUR 1.50.
+          <div className="hidden">
+            <div>Pricing</div>
+            <div>
+              The prices below include accommodation and meals. Towels are
+              available for an additional EUR 1.50.
+            </div>
+            <div>
+              <div>
+                <div>
+                  <div>Adult</div>
+                  <div>Early bird (Until 31 Jan 2025)</div>
+                </div>
+                <div>
+                  <div>EUR</div>
+                  <div>190</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>Adult</div>
+                </div>
+                <div>
+                  <div>EUR</div>
+                  <div>215</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>11-17</div>
+                  <div>Years Old</div>
+                </div>
+                <div>
+                  <div>EUR</div>
+                  <div>130</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>3-10</div>
+                  <div>Years Old</div>
+                </div>
+                <div>
+                  <div>EUR</div>
+                  <div>105</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>0-2</div>
+                  <div>Years Old</div>
+                </div>
+                <div>
+                  <div>EUR</div>
+                  <div>60</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div>
-              <div>
-                <div>Adult</div>
-                <div>Early bird (Until 31 Jan 2025)</div>
-              </div>
-              <div>
-                <div>EUR</div>
-                <div>190</div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>Adult</div>
-              </div>
-              <div>
-                <div>EUR</div>
-                <div>215</div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>11-17</div>
-                <div>Years Old</div>
-              </div>
-              <div>
-                <div>EUR</div>
-                <div>130</div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>3-10</div>
-                <div>Years Old</div>
-              </div>
-              <div>
-                <div>EUR</div>
-                <div>105</div>
-              </div>
-            </div>
-            <div>
-              <div>
-                <div>0-2</div>
-                <div>Years Old</div>
-              </div>
-              <div>
-                <div>EUR</div>
-                <div>60</div>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

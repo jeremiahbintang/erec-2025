@@ -7,6 +7,16 @@ module.exports = {
     flowbite.content(),
   ],
   theme: {
+    borderWidth: {
+      DEFAULT: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
+      '8': '8px',
+      '10': '10px'
+    },
     backgroundSize: {
       'auto': 'auto',
       'cover': 'cover',
@@ -28,17 +38,28 @@ module.exports = {
       '7xl': '5rem'
     },
     extend: {
+      ringWidth: {
+        '10': '10px',
+      },
       maxWidth: {
         '8xl': '90rem',
       },
       spacing: {
+        '30': '7.5rem',
+        '50': '12.5rem',
+        '105': '26.25rem',
+        '120': '30rem',
+        '128': '32rem',
         '140': '35rem',
+        '154': '38.5rem',
+        '160': '40rem'
       },
       colors: {
         'white': '#ffffff',
         'dark-slate-blue': '#353a50',
         'red': '#FF0000',
         'orange': '#FF8B00',
+        'light-gray': '#e5e5e5',
       },
     },
   },
