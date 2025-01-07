@@ -32,6 +32,50 @@ export default function HomePage() {
     jack: `Rev. Jack Kawira`,
     leo: `Vic. Leonardo Chandra`,
   };
+  const pricingOptions = [
+    {
+      key: "adult-early",
+      bgColor: "orange",
+      color: "white",
+      title: "Adult",
+      subtitle: "Early bird (Until 31 Jan 2025)",
+      mobileSubtitle: "Early bird",
+      subtitleClass: "font-sans normal-case",
+      price: "190",
+    },
+    {
+      key: "adult",
+      bgColor: "dark-slate-blue",
+      color: "white",
+      title: "Adult",
+      subtitle: "",
+      price: "215",
+    },
+    {
+      key: "teen",
+      bgColor: "dark-slate-blue",
+      color: "white",
+      title: "11 - 17",
+      subtitle: "Years Old",
+      price: "130",
+    },
+    {
+      key: "kid",
+      bgColor: "dark-slate-blue",
+      color: "white",
+      title: "3 - 10",
+      subtitle: "Years Old",
+      price: "105",
+    },
+    {
+      key: "baby",
+      bgColor: "dark-slate-blue",
+      color: "white",
+      title: "0 - 2",
+      subtitle: "Years Old",
+      price: "60",
+    },
+  ];
   return (
     <>
       <div className="w-full flex flex-col items-center">
@@ -134,7 +178,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        <div className="max-w-8xl bg-white px-10 py-10 lg:py-32 w-full flex items-center flex-col">
+        <div className="max-w-8xl bg-white px-10 pt-10 pb-16 lg:py-32 w-full flex items-center flex-col">
           <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
             <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
               About
@@ -174,7 +218,7 @@ export default function HomePage() {
               <RegisterButton />
             </div>
           </div>
-          <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-row lg:items-center lg:justify-between">
+          <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-row lg:items-center lg:justify-between mb-12 lg:mb-30">
             <div className="text-white w-full lg:w-105">
               <div className="font-medium text-3xl lg:text-6xl leading-tight mb-8">
                 Get to know
@@ -306,62 +350,48 @@ export default function HomePage() {
               <div className="absolute top-3 left-12 w-120 h-154 bg-light-gray rounded-2xl z-0"></div>
             </div>
           </div>
-          <div className="hidden">
-            <div>Pricing</div>
-            <div>
-              The prices below include accommodation and meals. Towels are
-              available for an additional EUR 1.50.
+          <div className="text-dark-slate-blue w-full">
+            <div className="text-3xl lg:text-4xl font-medium text-sans mb-2">
+              Pricing
             </div>
-            <div>
-              <div>
-                <div>
-                  <div>Adult</div>
-                  <div>Early bird (Until 31 Jan 2025)</div>
+            <div className="text-base lg:text-xl text-sans mb-6 lg:mb-10 max-w-120">
+              The prices below include accommodation and meals. Towels are
+              available for an additional{" "}
+              <span className="inline-block">EUR 1.50</span>.
+            </div>
+            <div className="flex flex-row w-full flex-nowrap overflow-x-scroll gap-5   text-white">
+              {pricingOptions.map((option) => (
+                <div
+                  key={option.key}
+                  className={`flex flex-col justify-between py-8 px-5 shrink-0 w-50 h-50 lg:w-120 lg:h-80 bg-${option.bgColor} text-${option.color} rounded-2xl`}
+                >
+                  <div>
+                    <div>
+                      <div className="uppercase text-2xl lg:text-4xl font-semibold font-serif leading-none">
+                        {option.title}
+                      </div>
+                      <div
+                        className={`${
+                          option.subtitleClass || "font-serif uppercase"
+                        } text-base lg:text-2xl font-normal lg:font-medium leading-none`}
+                      >
+                        <div className="hidden lg:block">{option.subtitle}</div>
+                        <div className="lg:hidden">
+                          {option.mobileSubtitle || option.subtitle}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="self-end leading-none">
+                    <span className="text-2.5xl lg:text-3xl font-medium ">
+                      EUR
+                    </span>
+                    <span className="text-5xl lg:text-6xl font-medium ">
+                      {option.price}
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <div>EUR</div>
-                  <div>190</div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>Adult</div>
-                </div>
-                <div>
-                  <div>EUR</div>
-                  <div>215</div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>11-17</div>
-                  <div>Years Old</div>
-                </div>
-                <div>
-                  <div>EUR</div>
-                  <div>130</div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>3-10</div>
-                  <div>Years Old</div>
-                </div>
-                <div>
-                  <div>EUR</div>
-                  <div>105</div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div>0-2</div>
-                  <div>Years Old</div>
-                </div>
-                <div>
-                  <div>EUR</div>
-                  <div>60</div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
