@@ -124,7 +124,7 @@ export default function HomePage() {
         </div>
 
         {/* Section 2 */}
-        <div className="max-w-8xl px-10 pb-10 lg:pb-32 w-full">
+        <div className="max-w-8xl px-5 lg:px-10 pb-10 lg:pb-32 w-full">
           <div className="mb-8 md:mb-10">
             <div className="font-sans text-white text-2xl md:text-4xl font-medium leading-none">
               European Reformed <br />
@@ -136,8 +136,8 @@ export default function HomePage() {
               fellowship as one body of Christ.
             </div>
           </div>
-          <div className="mb-10 md:mb-20 mx-[-2.5rem] lg:mx-0 relative rounded-none w-screen lg:w-full h-80 lg:h-140">
-            <Carousel theme={customEventCarouselTheme}>
+          <div className="mb-10 md:mb-20 -mx-5 lg:mx-0 relative rounded-none w-screen lg:w-full h-80 lg:h-140">
+            <Carousel theme={customEventCarouselTheme} slide>
               <Image
                 className="object-cover w-auto h-full lg:h-auto lg:w-full rounded-none"
                 src="/event-images/event1.png"
@@ -209,7 +209,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        <div className="max-w-8xl bg-white px-10 pt-10 pb-16 lg:py-32 w-screen flex items-center flex-col">
+        <div className="max-w-8xl bg-white px-5 lg:px-10 pt-10 pb-16 lg:py-32 w-screen flex items-center flex-col">
           <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
             <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
               About
@@ -394,7 +394,7 @@ export default function HomePage() {
               available for an additional{" "}
               <span className="inline-block">EUR 1.50</span>.
             </div>
-            <div className="flex flex-row w-full flex-nowrap overflow-x-scroll gap-5   text-white">
+            <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
               {pricingOptions.map((option) => (
                 <div
                   key={option.key}
