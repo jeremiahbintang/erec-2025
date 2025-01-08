@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./homePage.module.css";
 import { useState } from "react";
 
-const customTheme: CustomFlowbiteTheme["carousel"] = {
+const customEventCarouselTheme: CustomFlowbiteTheme["carousel"] = {
   root: {
     leftControl: "hidden",
     rightControl: "hidden",
@@ -137,7 +137,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mb-10 md:mb-20 mx-[-2.5rem] lg:mx-0 relative rounded-none w-screen lg:w-full h-80 lg:h-140">
-            <Carousel theme={customTheme}>
+            <Carousel theme={customEventCarouselTheme}>
               <Image
                 className="object-cover w-auto h-full lg:h-auto lg:w-full rounded-none"
                 src="/event-images/event1.png"
