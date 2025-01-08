@@ -10,7 +10,7 @@ const customEventCarouselTheme: CustomFlowbiteTheme["carousel"] = {
     rightControl: "hidden",
   },
   scrollContainer: {
-    base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none lg:rounded-lg",
+    base: "flex h-full snap-mandatory overflow-y-hidden !overflow-x-scroll !scroll-smooth rounded-none lg:rounded-lg",
     snap: "snap-x",
   },
   indicators: {
@@ -36,7 +36,7 @@ const customSpeakersCarouselTheme: CustomFlowbiteTheme["carousel"] = {
     },
   },
   scrollContainer: {
-    base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none absolute top-14 w-full",
+    base: "flex h-full snap-mandatory overflow-y-hidden !overflow-x-scroll !scroll-smooth rounded-none absolute top-14 w-full",
   },
 };
 
