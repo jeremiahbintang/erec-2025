@@ -3,12 +3,39 @@ import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 import Image from "next/image";
 import styles from "./homePage.module.css";
 import { useState } from "react";
+
 const customTheme: CustomFlowbiteTheme["carousel"] = {
   scrollContainer: {
     base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none lg:rounded-lg",
     snap: "snap-x",
   },
+  indicators: {
+    wrapper:
+      "absolute bottom-5 left-1/2 -translate-x-1/2 lg:transform-none lg:right-5 lg:left-auto flex space-x-3",
+    active: {
+      off: "bg-white/50 hover:bg-white",
+      on: "bg-white",
+    },
+  },
 };
+
+const customSpeakersCarouselTheme: CustomFlowbiteTheme["carousel"] = {
+  root: {
+    leftControl: "hidden",
+    rightControl: "hidden",
+  },
+  indicators: {
+    wrapper: "absolute top-5 left-1/2 flex -translate-x-1/2 space-x-3",
+    active: {
+      off: "bg-white/50 hover:bg-white",
+      on: "bg-white",
+    },
+  },
+  scrollContainer: {
+    base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none absolute top-14 w-full",
+  },
+};
+
 function RegisterButton() {
   return (
     <a
@@ -41,7 +68,7 @@ export default function HomePage() {
       subtitle: "Early bird (Until 31 Jan 2025)",
       mobileSubtitle: "Early bird",
       subtitleClass: "font-sans normal-case",
-      price: "190",
+      price: "195",
     },
     {
       key: "adult",
@@ -178,7 +205,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        <div className="max-w-8xl bg-white px-10 pt-10 pb-16 lg:py-32 w-full flex items-center flex-col">
+        <div className="max-w-8xl bg-white px-10 pt-10 pb-16 lg:py-32 w-screen flex items-center flex-col">
           <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
             <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
               About
@@ -218,17 +245,14 @@ export default function HomePage() {
               <RegisterButton />
             </div>
           </div>
-          <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-row lg:items-center lg:justify-between mb-12 lg:mb-30">
+          <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-col lg:gap-20 xl:gap-0 xl:flex-row lg:items-start xl:items-center lg:justify-between mb-12 lg:mb-30">
             <div className="text-white w-full lg:w-105">
-              <div className="font-medium text-3xl lg:text-6xl leading-tight mb-8">
-                Get to know
-                <br />
-                some of
-                <br />
-                the speakers
+              <div className="font-medium text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8">
+                Get to know some of
+                <span className="inline-block">the speakers</span>
               </div>
               <div className="h-128 font-sans lg:hidden">
-                <Carousel>
+                <Carousel theme={customSpeakersCarouselTheme}>
                   <div className="h-full">
                     <Image
                       className="object-cover w-30 h-30 rounded-full  mb-4"
