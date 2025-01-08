@@ -255,6 +255,7 @@ export default function HomePage() {
                 <Carousel theme={customSpeakersCarouselTheme}>
                   <div className="h-full">
                     <Image
+                      quality={75}
                       className="object-cover w-30 h-30 rounded-full  mb-4"
                       src="/speakers/billy.png"
                       alt="seminar"
@@ -266,6 +267,7 @@ export default function HomePage() {
                   </div>
                   <div className="h-full">
                     <Image
+                      quality={75}
                       className="object-cover w-30 h-30 rounded-full mb-4"
                       src="/speakers/jack.png"
                       alt="group photo"
@@ -277,6 +279,7 @@ export default function HomePage() {
                   </div>
                   <div className="h-full">
                     <Image
+                      quality={75}
                       className="object-cover w-30 h-30 rounded-full mb-4"
                       src="/speakers/leo.png"
                       alt="kids"
@@ -296,6 +299,7 @@ export default function HomePage() {
                   onClick={() => SetSpeaker("billy")}
                 >
                   <Image
+                    quality={75}
                     src="/speakers/billy.png"
                     className={`rounded-full object-cover scale-125 translate-y-3`}
                     alt="billy"
@@ -315,6 +319,7 @@ export default function HomePage() {
                   onClick={() => SetSpeaker("jack")}
                 >
                   <Image
+                    quality={75}
                     src="/speakers/jack.png"
                     className={`rounded-full object-cover scale-150`}
                     alt="jack"
@@ -333,6 +338,7 @@ export default function HomePage() {
                   onClick={() => SetSpeaker("leo")}
                 >
                   <Image
+                    quality={75}
                     src="/speakers/leo.png"
                     className={`rounded-full object-cover scale-125`}
                     alt="leo"
@@ -350,6 +356,7 @@ export default function HomePage() {
               <div className="relative w-120 h-160 bg-white rounded-2xl z-10 text-dark-slate-blue p-10">
                 <div className="w-50 h-50 relative rounded-full overflow-hidden mb-10">
                   <Image
+                    quality={75}
                     src={`/speakers/${speaker}.png`}
                     className="object-cover rounded-full scale-125 translate-y-3"
                     fill
