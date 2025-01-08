@@ -5,6 +5,10 @@ import styles from "./homePage.module.css";
 import { useState } from "react";
 
 const customTheme: CustomFlowbiteTheme["carousel"] = {
+  root: {
+    leftControl: "hidden",
+    rightControl: "hidden",
+  },
   scrollContainer: {
     base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none lg:rounded-lg",
     snap: "snap-x",
