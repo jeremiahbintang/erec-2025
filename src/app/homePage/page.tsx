@@ -55,12 +55,14 @@ export default function HomePage() {
   const [speaker, SetSpeaker] = useState("billy");
   const speakerDescriptions = {
     billy: `Teaches systematic theology at the International Reformed Evangelical Seminary Jakarta and serves on the World Reformed Fellowship's theological commission. With 24 years of pastoral experience, he's authored "Ajarlah Kami Bertumbuh" and "Sola Dei Gloria." His research spans soteriology, anthropology, spirituality, John Calvin's theology, and J.S. Bach. Find his sermons on the "Sola Dei Gloria" YouTube channel.`,
-    jack: `Rev. Jack David Kawira is a pastor at the Reformed Evangelical Church of Indonesia (GRII) and a lecturer at the International Reformed Evangelical Seminary (STTRII) in Jakarta. He holds an S.E. from Institut Bisnis dan Informatika Indonesia, an M.Th. from STTRII Jakarta, and an M.A. from Theologische Universiteit Kampen, Netherlands, and is currently pursuing his Ph.D. at Vrije Universiteit Amsterdam.`,
+    edward: `Rev. Edward Oei is the senior pastor of IREC Medan, a member of IREC Synod Development Board, Secretariat of IREC Central, pastor of Fellowship of Indonesian Reformed Evangelical Students (FIRES), editor in chief of PILLAR (bulletin for Indonesian Reformed Evangelical Church Youth). He holds a Diplom Ingenieur from Technische Universität Berlin and an M.C.S. from International Reformed Evangelical Seminary, Jakarta.`,
+    sutjipto: `Rev. Sutjipto Subeno earned his theological degrees from the International Reformed Evangelical Seminary Jakarta and he is currently working on his Ph.D dissertation in the same institution. He is the pastor GRII Bintaro and MRII Kupang, the Head of Admission and lecturer at the International Reformed Evangelical Seminary Jakarta. He pioneered the establishment of IRECS/SKRII, a theological school for laymen and professionals, and Momentum, a christian literature publishing house.`,
     leo: `First came to GRII in 2003 while taking his Design Bachelor's Degree at UPH Karawaci. From then on, with the growing urge and calling to serve God as His servant, he continued to serve in youth ministry of GRII Karawaci up until 2012 when he entered STTRII Jakarta. He received his Master of Theology in 2015, and has since served as an assistant pastor; from 2015-2018 in GRII Bintaro, and in 2018-2021 in both GRII Solo and GRII Yogyakarta. At the moment, he is continuing his doctoral study in Theologische Universiteit Apeldoorn, Netherlands.`,
   };
   const speakerNames = {
     billy: `Rev. Billy Kristanto, Ph.D`,
-    jack: `Rev. Jack Kawira`,
+    edward: `Rev. Edward Oei`,
+    sutjipto: `Rev. Sutjipto Subeno`,
     leo: `Vic. Leonardo Chandra`,
   };
   const pricingOptions = [
@@ -273,13 +275,28 @@ export default function HomePage() {
                     <Image
                       quality={75}
                       className="object-cover w-30 h-30 rounded-full mb-4"
-                      src="/speakers/jack.png"
+                      src="/speakers/edward.png"
                       alt="group photo"
                       width={1920}
                       height={1080}
                     />
-                    <div className="font-medium">{speakerNames.jack}</div>
-                    <div className="text-xs">{speakerDescriptions.jack}</div>
+                    <div className="font-medium">{speakerNames.edward}</div>
+                    <div className="text-xs">{speakerDescriptions.edward}</div>
+                  </div>
+
+                  <div className="h-full">
+                    <Image
+                      quality={75}
+                      className="object-cover w-30 h-30 rounded-full mb-4"
+                      src="/speakers/sutjipto.png"
+                      alt="group photo"
+                      width={1920}
+                      height={1080}
+                    />
+                    <div className="font-medium">{speakerNames.sutjipto}</div>
+                    <div className="text-xs">
+                      {speakerDescriptions.sutjipto}
+                    </div>
                   </div>
                   <div className="h-full">
                     <Image
@@ -318,18 +335,38 @@ export default function HomePage() {
 
                 <div
                   className={`group overflow-hidden relative w-30 h-30 rounded-full ${
-                    speaker == "jack" && "opacity-40 ring-10 ring-white"
+                    speaker == "edward" && "opacity-40 ring-10 ring-white"
                   }`}
-                  onClick={() => SetSpeaker("jack")}
+                  onClick={() => SetSpeaker("edward")}
                 >
                   <Image
                     quality={75}
-                    src="/speakers/jack.png"
-                    className={`rounded-full object-cover scale-150`}
-                    alt="jack"
+                    src="/speakers/edward.png"
+                    className={`rounded-full object-cover scale-100`}
+                    alt="edward"
                     fill
                   />
-                  {speaker != "jack" && (
+                  {speaker != "edward" && (
+                    <div
+                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                    />
+                  )}
+                </div>
+
+                <div
+                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                    speaker == "sutjipto" && "opacity-40 ring-10 ring-white"
+                  }`}
+                  onClick={() => SetSpeaker("sutjipto")}
+                >
+                  <Image
+                    quality={75}
+                    src="/speakers/sutjipto.png"
+                    className={`rounded-full object-cover scale-100`}
+                    alt="sutjipto"
+                    fill
+                  />
+                  {speaker != "sutjipto" && (
                     <div
                       className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
                     />
@@ -362,7 +399,7 @@ export default function HomePage() {
                   <Image
                     quality={75}
                     src={`/speakers/${speaker}.png`}
-                    className="object-cover rounded-full scale-125 translate-y-3"
+                    className="object-cover rounded-full scale-100 translate-y-3"
                     fill
                     alt={speaker}
                   />
@@ -370,15 +407,19 @@ export default function HomePage() {
                 <div className="font-medium text-3xl mb-2">
                   {speaker == "billy"
                     ? speakerNames.billy
-                    : speaker == "jack"
-                    ? speakerNames.jack
+                    : speaker == "edward"
+                    ? speakerNames.edward
+                    : speaker == "sutjipto"
+                    ? speakerNames.sutjipto
                     : speakerNames.leo}
                 </div>
                 <div>
                   {speaker == "billy"
                     ? speakerDescriptions.billy
-                    : speaker == "jack"
-                    ? speakerDescriptions.jack
+                    : speaker == "edward"
+                    ? speakerDescriptions.edward
+                    : speaker == "sutjipto"
+                    ? speakerDescriptions.sutjipto
                     : speakerDescriptions.leo}
                 </div>
               </div>
