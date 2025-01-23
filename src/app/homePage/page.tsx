@@ -211,263 +211,269 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        <div className="max-w-8xl bg-white px-5 lg:px-10 pt-10 pb-16 lg:py-32 w-screen flex items-center flex-col">
-          <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
-            <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
-              About
-            </div>
-            <div className="text-2xl lg:text-7xl leading-none font-bold lg:font-semibold font-serif uppercase mb-6">
-              The Theme
-            </div>
-            <div className="text-base font-sans leading-loose">
-              During special occasions like Christmas or retreats, we often
-              experience spiritual highs that ignite a passion to serve God in
-              our daily lives. However, this fervor can sometimes fade over
-              time.
-            </div>
-          </div>
-          <div className="flex flex-col w-full font-sans lg:flex-row text-dark-slate-blue gap-6 lg:gap-24 mb-12">
-            <div className="font-medium lg:basis-1/2">
-              <div className="text-base lg:text-3xl">
-                The question then arises:
+        <div className="bg-white w-screen flex items-center flex-col">
+          <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
+            <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
+              <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
+                About
               </div>
-              <div className="text-3xl lg:text-6xl leading-tight">
-                How do we sustain that spiritual momentum? How do we persevere
-                in faith through all seasons?
+              <div className="text-2xl lg:text-7xl leading-none font-bold lg:font-semibold font-serif uppercase mb-6">
+                The Theme
+              </div>
+              <div className="text-base font-sans leading-loose">
+                During special occasions like Christmas or retreats, we often
+                experience spiritual highs that ignite a passion to serve God in
+                our daily lives. However, this fervor can sometimes fade over
+                time.
               </div>
             </div>
-            <div className="lg:basis-1/2">
-              <div className="text-base lg:text-2xl leading-relaxed mb-6">
-                These questions will be addressed at this year&apos;s European
-                Reformed Evangelical Convention (EREC). The theme for this year
-                is The Gift of Perseverance. Perseverance means maintaining the
-                fire of faith in every season. This retreat is not just about a
-                temporary boost; it&apos;s about fostering a lasting commitment
-                to your spiritual journey. Come and discover how to keep your
-                inner fire burning brightly, ensuring that your faith remains
-                strong and impactful in your everyday life. Join us and register
-                now!
+            <div className="flex flex-col w-full font-sans lg:flex-row text-dark-slate-blue gap-6 lg:gap-24 mb-12">
+              <div className="font-medium lg:basis-1/2">
+                <div className="text-base lg:text-3xl">
+                  The question then arises:
+                </div>
+                <div className="text-3xl lg:text-6xl leading-tight">
+                  How do we sustain that spiritual momentum? How do we persevere
+                  in faith through all seasons?
+                </div>
               </div>
-              <RegisterButton />
+              <div className="lg:basis-1/2">
+                <div className="text-base lg:text-2xl leading-relaxed mb-6">
+                  These questions will be addressed at this year&apos;s European
+                  Reformed Evangelical Convention (EREC). The theme for this
+                  year is The Gift of Perseverance. Perseverance means
+                  maintaining the fire of faith in every season. This retreat is
+                  not just about a temporary boost; it&apos;s about fostering a
+                  lasting commitment to your spiritual journey. Come and
+                  discover how to keep your inner fire burning brightly,
+                  ensuring that your faith remains strong and impactful in your
+                  everyday life. Join us and register now!
+                </div>
+                <RegisterButton />
+              </div>
             </div>
-          </div>
-          <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-col lg:gap-20 xl:gap-0 xl:flex-row lg:items-start xl:items-center lg:justify-between mb-12 lg:mb-30">
-            <div className="text-white w-full lg:w-105">
-              <div className="font-medium text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8">
-                Get to know some of
-                <span className="inline-block">the speakers</span>
-              </div>
-              <div className="h-128 font-sans lg:hidden">
-                <Carousel theme={customSpeakersCarouselTheme}>
-                  <div className="h-full">
-                    <Image
-                      quality={75}
-                      className="object-cover w-30 h-30 rounded-full  mb-4"
-                      src="/speakers/billy.png"
-                      alt="seminar"
-                      width={1920}
-                      height={1080}
-                    />
-                    <div className="font-medium">{speakerNames.billy}</div>
-                    <div className="text-xs">{speakerDescriptions.billy}</div>
-                  </div>
-                  <div className="h-full">
-                    <Image
-                      quality={75}
-                      className="object-cover w-30 h-30 rounded-full mb-4"
-                      src="/speakers/edward.png"
-                      alt="group photo"
-                      width={1920}
-                      height={1080}
-                    />
-                    <div className="font-medium">{speakerNames.edward}</div>
-                    <div className="text-xs">{speakerDescriptions.edward}</div>
-                  </div>
-
-                  <div className="h-full">
-                    <Image
-                      quality={75}
-                      className="object-cover w-30 h-30 rounded-full mb-4"
-                      src="/speakers/sutjipto.png"
-                      alt="group photo"
-                      width={1920}
-                      height={1080}
-                    />
-                    <div className="font-medium">{speakerNames.sutjipto}</div>
-                    <div className="text-xs">
-                      {speakerDescriptions.sutjipto}
+            <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-col lg:gap-20 xl:gap-0 xl:flex-row lg:items-start xl:items-center lg:justify-between mb-12 lg:mb-30">
+              <div className="text-white w-full lg:w-105">
+                <div className="font-medium text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8">
+                  Get to know some of
+                  <span className="inline-block">the speakers</span>
+                </div>
+                <div className="h-128 font-sans lg:hidden">
+                  <Carousel theme={customSpeakersCarouselTheme}>
+                    <div className="h-full">
+                      <Image
+                        quality={75}
+                        className="object-cover w-30 h-30 rounded-full  mb-4"
+                        src="/speakers/billy.png"
+                        alt="seminar"
+                        width={1920}
+                        height={1080}
+                      />
+                      <div className="font-medium">{speakerNames.billy}</div>
+                      <div className="text-xs">{speakerDescriptions.billy}</div>
                     </div>
-                  </div>
-                  <div className="h-full">
+                    <div className="h-full">
+                      <Image
+                        quality={75}
+                        className="object-cover w-30 h-30 rounded-full mb-4"
+                        src="/speakers/edward.png"
+                        alt="group photo"
+                        width={1920}
+                        height={1080}
+                      />
+                      <div className="font-medium">{speakerNames.edward}</div>
+                      <div className="text-xs">
+                        {speakerDescriptions.edward}
+                      </div>
+                    </div>
+
+                    <div className="h-full">
+                      <Image
+                        quality={75}
+                        className="object-cover w-30 h-30 rounded-full mb-4"
+                        src="/speakers/sutjipto.png"
+                        alt="group photo"
+                        width={1920}
+                        height={1080}
+                      />
+                      <div className="font-medium">{speakerNames.sutjipto}</div>
+                      <div className="text-xs">
+                        {speakerDescriptions.sutjipto}
+                      </div>
+                    </div>
+                    <div className="h-full">
+                      <Image
+                        quality={75}
+                        className="object-cover w-30 h-30 rounded-full mb-4"
+                        src="/speakers/leo.png"
+                        alt="kids"
+                        width={1920}
+                        height={1080}
+                      />
+                      <div className="font-medium">{speakerNames.leo}</div>
+                      <div className="text-xs">{speakerDescriptions.leo}</div>
+                    </div>
+                  </Carousel>
+                </div>
+                <div className="flex-row gap-5 hidden lg:flex">
+                  <div
+                    className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                      speaker == "billy" && "opacity-40 ring-10 ring-white"
+                    }`}
+                    onClick={() => SetSpeaker("billy")}
+                  >
                     <Image
                       quality={75}
-                      className="object-cover w-30 h-30 rounded-full mb-4"
-                      src="/speakers/leo.png"
-                      alt="kids"
-                      width={1920}
-                      height={1080}
+                      src="/speakers/billy.png"
+                      className={`rounded-full object-cover scale-125 translate-y-3`}
+                      alt="billy"
+                      fill
                     />
-                    <div className="font-medium">{speakerNames.leo}</div>
-                    <div className="text-xs">{speakerDescriptions.leo}</div>
-                  </div>
-                </Carousel>
-              </div>
-              <div className="flex-row gap-5 hidden lg:flex">
-                <div
-                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
-                    speaker == "billy" && "opacity-40 ring-10 ring-white"
-                  }`}
-                  onClick={() => SetSpeaker("billy")}
-                >
-                  <Image
-                    quality={75}
-                    src="/speakers/billy.png"
-                    className={`rounded-full object-cover scale-125 translate-y-3`}
-                    alt="billy"
-                    fill
-                  />
-                  {speaker != "billy" && (
-                    <div
-                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
-                    />
-                  )}
-                </div>
-
-                <div
-                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
-                    speaker == "edward" && "opacity-40 ring-10 ring-white"
-                  }`}
-                  onClick={() => SetSpeaker("edward")}
-                >
-                  <Image
-                    quality={75}
-                    src="/speakers/edward.png"
-                    className={`rounded-full object-cover scale-100`}
-                    alt="edward"
-                    fill
-                  />
-                  {speaker != "edward" && (
-                    <div
-                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
-                    />
-                  )}
-                </div>
-
-                <div
-                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
-                    speaker == "sutjipto" && "opacity-40 ring-10 ring-white"
-                  }`}
-                  onClick={() => SetSpeaker("sutjipto")}
-                >
-                  <Image
-                    quality={75}
-                    src="/speakers/sutjipto.png"
-                    className={`rounded-full object-cover scale-100`}
-                    alt="sutjipto"
-                    fill
-                  />
-                  {speaker != "sutjipto" && (
-                    <div
-                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
-                    />
-                  )}
-                </div>
-                <div
-                  className={`group overflow-hidden relative w-30 h-30 rounded-full ${
-                    speaker == "leo" && "opacity-40 ring-10 ring-white"
-                  }`}
-                  onClick={() => SetSpeaker("leo")}
-                >
-                  <Image
-                    quality={75}
-                    src="/speakers/leo.png"
-                    className={`rounded-full object-cover scale-125`}
-                    alt="leo"
-                    fill
-                  />
-                  {speaker != "leo" && (
-                    <div
-                      className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="relative hidden lg:block">
-              <div className="relative w-120 h-160 bg-white rounded-2xl z-10 text-dark-slate-blue p-10">
-                <div className="w-50 h-50 relative rounded-full overflow-hidden mb-10">
-                  <Image
-                    quality={75}
-                    src={`/speakers/${speaker}.png`}
-                    className="object-cover rounded-full scale-100 translate-y-3"
-                    fill
-                    alt={speaker}
-                  />
-                </div>
-                <div className="font-medium text-3xl mb-2">
-                  {speaker == "billy"
-                    ? speakerNames.billy
-                    : speaker == "edward"
-                    ? speakerNames.edward
-                    : speaker == "sutjipto"
-                    ? speakerNames.sutjipto
-                    : speakerNames.leo}
-                </div>
-                <div>
-                  {speaker == "billy"
-                    ? speakerDescriptions.billy
-                    : speaker == "edward"
-                    ? speakerDescriptions.edward
-                    : speaker == "sutjipto"
-                    ? speakerDescriptions.sutjipto
-                    : speakerDescriptions.leo}
-                </div>
-              </div>
-              <div className="absolute top-3 left-12 w-120 h-154 bg-light-gray rounded-2xl z-0"></div>
-            </div>
-          </div>
-          <div className="text-dark-slate-blue w-full">
-            <div className="text-3xl lg:text-4xl font-medium text-sans mb-2">
-              Pricing
-            </div>
-            <div className="text-base lg:text-xl text-sans mb-6 lg:mb-10 max-w-120">
-              The prices below include accommodation and meals. Towels are
-              available for an additional{" "}
-              <span className="inline-block">EUR 1.50</span>.
-            </div>
-            <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
-              {pricingOptions.map((option) => (
-                <div
-                  key={option.key}
-                  className={`flex flex-col justify-between py-8 px-5 shrink-0 w-50 h-50 lg:w-120 lg:h-80 bg-${option.bgColor} text-${option.color} rounded-2xl`}
-                >
-                  <div>
-                    <div>
-                      <div className="uppercase text-2xl lg:text-4xl font-semibold font-serif leading-none">
-                        {option.title}
-                      </div>
+                    {speaker != "billy" && (
                       <div
-                        className={`${
-                          option.subtitleClass || "font-serif uppercase"
-                        } text-base lg:text-2xl font-normal lg:font-medium leading-none`}
-                      >
-                        <div className="hidden lg:block">{option.subtitle}</div>
-                        <div className="lg:hidden">
-                          {option.mobileSubtitle || option.subtitle}
+                        className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                      />
+                    )}
+                  </div>
+
+                  <div
+                    className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                      speaker == "edward" && "opacity-40 ring-10 ring-white"
+                    }`}
+                    onClick={() => SetSpeaker("edward")}
+                  >
+                    <Image
+                      quality={75}
+                      src="/speakers/edward.png"
+                      className={`rounded-full object-cover scale-100`}
+                      alt="edward"
+                      fill
+                    />
+                    {speaker != "edward" && (
+                      <div
+                        className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                      />
+                    )}
+                  </div>
+
+                  <div
+                    className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                      speaker == "sutjipto" && "opacity-40 ring-10 ring-white"
+                    }`}
+                    onClick={() => SetSpeaker("sutjipto")}
+                  >
+                    <Image
+                      quality={75}
+                      src="/speakers/sutjipto.png"
+                      className={`rounded-full object-cover scale-100`}
+                      alt="sutjipto"
+                      fill
+                    />
+                    {speaker != "sutjipto" && (
+                      <div
+                        className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                      />
+                    )}
+                  </div>
+                  <div
+                    className={`group overflow-hidden relative w-30 h-30 rounded-full ${
+                      speaker == "leo" && "opacity-40 ring-10 ring-white"
+                    }`}
+                    onClick={() => SetSpeaker("leo")}
+                  >
+                    <Image
+                      quality={75}
+                      src="/speakers/leo.png"
+                      className={`rounded-full object-cover scale-125`}
+                      alt="leo"
+                      fill
+                    />
+                    {speaker != "leo" && (
+                      <div
+                        className={`absolute rounded-full inset-0 bg-white opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="relative hidden lg:block">
+                <div className="relative w-120 h-160 bg-white rounded-2xl z-10 text-dark-slate-blue p-10">
+                  <div className="w-50 h-50 relative rounded-full overflow-hidden mb-10">
+                    <Image
+                      quality={75}
+                      src={`/speakers/${speaker}.png`}
+                      className="object-cover rounded-full scale-100 translate-y-3"
+                      fill
+                      alt={speaker}
+                    />
+                  </div>
+                  <div className="font-medium text-3xl mb-2">
+                    {speaker == "billy"
+                      ? speakerNames.billy
+                      : speaker == "edward"
+                      ? speakerNames.edward
+                      : speaker == "sutjipto"
+                      ? speakerNames.sutjipto
+                      : speakerNames.leo}
+                  </div>
+                  <div>
+                    {speaker == "billy"
+                      ? speakerDescriptions.billy
+                      : speaker == "edward"
+                      ? speakerDescriptions.edward
+                      : speaker == "sutjipto"
+                      ? speakerDescriptions.sutjipto
+                      : speakerDescriptions.leo}
+                  </div>
+                </div>
+                <div className="absolute top-3 left-12 w-120 h-154 bg-light-gray rounded-2xl z-0"></div>
+              </div>
+            </div>
+            <div className="text-dark-slate-blue w-full">
+              <div className="text-3xl lg:text-4xl font-medium text-sans mb-2">
+                Pricing
+              </div>
+              <div className="text-base lg:text-xl text-sans mb-6 lg:mb-10 max-w-120">
+                The prices below include accommodation and meals. Towels are
+                available for an additional{" "}
+                <span className="inline-block">EUR 1.50</span>.
+              </div>
+              <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
+                {pricingOptions.map((option) => (
+                  <div
+                    key={option.key}
+                    className={`flex flex-col justify-between py-8 px-5 shrink-0 w-50 h-50 lg:w-120 lg:h-80 bg-${option.bgColor} text-${option.color} rounded-2xl`}
+                  >
+                    <div>
+                      <div>
+                        <div className="uppercase text-2xl lg:text-4xl font-semibold font-serif leading-none">
+                          {option.title}
+                        </div>
+                        <div
+                          className={`${
+                            option.subtitleClass || "font-serif uppercase"
+                          } text-base lg:text-2xl font-normal lg:font-medium leading-none`}
+                        >
+                          <div className="hidden lg:block">
+                            {option.subtitle}
+                          </div>
+                          <div className="lg:hidden">
+                            {option.mobileSubtitle || option.subtitle}
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div className="self-end leading-none">
+                      <span className="text-2.5xl lg:text-3xl font-medium ">
+                        EUR
+                      </span>
+                      <span className="text-5xl lg:text-6xl font-medium ">
+                        {option.price}
+                      </span>
+                    </div>
                   </div>
-                  <div className="self-end leading-none">
-                    <span className="text-2.5xl lg:text-3xl font-medium ">
-                      EUR
-                    </span>
-                    <span className="text-5xl lg:text-6xl font-medium ">
-                      {option.price}
-                    </span>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
