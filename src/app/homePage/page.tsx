@@ -60,7 +60,7 @@ export default function HomePage() {
     leo: `First came to GRII in 2003 while taking his Design Bachelor's Degree at UPH Karawaci. From then on, with the growing urge and calling to serve God as His servant, he continued to serve in youth ministry of GRII Karawaci up until 2012 when he entered STTRII Jakarta. He received his Master of Theology in 2015, and has since served as an assistant pastor; from 2015-2018 in GRII Bintaro, and in 2018-2021 in both GRII Solo and GRII Yogyakarta. At the moment, he is continuing his doctoral study in Theologische Universiteit Apeldoorn, Netherlands.`,
   };
   const speakerNames = {
-    billy: `Rev. Billy Kristanto, Ph.D`,
+    billy: `Rev. Billy Kristanto`,
     edward: `Rev. Edward Oei`,
     sutjipto: `Rev. Sutjipto Subeno`,
     leo: `Vic. Leonardo Chandra`,
