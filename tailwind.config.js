@@ -46,6 +46,8 @@ module.exports = {
         '8xl': '90rem',
       },
       spacing: {
+        '18': '4.5rem',
+        '25': '6.25rem',
         '30': '7.5rem',
         '50': '12.5rem',
         '80': '20rem',
@@ -62,6 +64,7 @@ module.exports = {
         'red': '#FF0000',
         'orange': '#FF8B00',
         'light-gray': '#e5e5e5',
+        'very-light-gray': '#f4f4f4'
       },
     },
   },

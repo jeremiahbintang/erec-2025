@@ -51,6 +51,42 @@ function RegisterButton() {
     </a>
   );
 }
+
+function Time({ hour, minute }: { hour: string; minute: string }) {
+  return (
+    <div className="flex text-5xl lg:text-6xl gap-2 text-medium">
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+        {hour[0]}
+      </div>
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+        {hour[1]}
+      </div>
+      <div>:</div>
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+        {minute[0]}
+      </div>
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+        {minute[1]}
+      </div>
+    </div>
+  );
+}
+
+function DateAndDescription({
+  date,
+  description,
+}: {
+  date: string;
+  description: string;
+}) {
+  return (
+    <div className="flex flex-col items-start gap-2">
+      <div className="text-2xl lg:text-3xl font-medium">{date}</div>
+      <div className="text-left">{description}</div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const [speaker, SetSpeaker] = useState("billy");
   const speakerDescriptions = {
@@ -429,13 +465,13 @@ export default function HomePage() {
                 <div className="absolute top-3 left-12 w-120 h-154 bg-light-gray rounded-2xl z-0"></div>
               </div>
             </div>
-            <div className="text-dark-slate-blue w-full">
+            <div className="text-dark-slate-blue w-full mb-18 lg:mb-40">
               <div className="text-3xl lg:text-4xl font-medium text-sans mb-2">
                 Pricing
               </div>
               <div className="text-base lg:text-xl text-sans mb-6 lg:mb-10 max-w-120">
                 The prices below include accommodation and meals. Towels are
-                available for an additional{" "}
+                available for an additional
                 <span className="inline-block">EUR 1.50</span>.
               </div>
               <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
@@ -473,6 +509,32 @@ export default function HomePage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+            <div className="text-center text-dark-slate-blue">
+              <div className="text-3xl lg:text-6xl font-medium">
+                All set for the trip?
+              </div>
+              <div className="lg:text-2xl mb-16 lg:mb-30">
+                Here are the important timings
+                <br />
+                you will need to know to book your trip.
+              </div>
+              <div className="flex flex-col lg:flex-row lg:max-w-4xl gap-4 lg:gap-12 mb-10 lg:mb-20">
+                <Time hour="12" minute="30" />
+                <DateAndDescription
+                  date="Fri, 18 April"
+                  description="The first session begins. Spare enough time to complete your check-in upon arrival. No lunch provided, we recommend having lunch before arriving, such as at the station. Most restaurants outside are closed on this date."
+                />
+              </div>
+              <div className="flex flex-col lg:flex-row lg:max-w-4xl gap-4 lg:gap-12 mb-20">
+                <Time hour="11" minute="30" />
+                <DateAndDescription
+                  date="Mon, 21 April"
+                  description="The last session estimated to end. Lunch is provided until
+                    13:00 before your departure. Make sure you have your bags
+                    ready before this last session."
+                />
               </div>
             </div>
           </div>
