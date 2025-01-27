@@ -6,6 +6,7 @@ import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import styles from "./page.module.css";
 import NavBar from "@/app/components/navbar";
@@ -48,6 +49,8 @@ export default function RootLayout({
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
       <head>{/* <ColorSchemeScript /> */}</head>
+      <GoogleTagManager gtmId="G-PMS138WBKS" />
+
       <body className={styles.page}>
         {/* <MantineProvider> */}
         <NavBar />
