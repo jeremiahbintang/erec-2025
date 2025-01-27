@@ -49,7 +49,7 @@ export default function RootLayout({
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
       <head>{/* <ColorSchemeScript /> */}</head>
-      <GoogleTagManager gtmId="G-PMS138WBKS" />
+      <GoogleTagManager gtmId="GTM-M6M3VWFH" />
 
       <body className={styles.page}>
         {/* <MantineProvider> */}
