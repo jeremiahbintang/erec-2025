@@ -43,6 +43,7 @@ const customSpeakersCarouselTheme: CustomFlowbiteTheme["carousel"] = {
 function RegisterButton() {
   return (
     <a
+      id="register-button"
       href="https://bit.ly/EREC2025"
       target="_blank"
       className="w-fit text-xs lg:text-xl bg-orange px-6 lg:px-10 h-10 lg:h-16 uppercase text-white font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
