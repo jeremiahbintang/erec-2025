@@ -549,7 +549,7 @@ export default function HomePage() {
           {/* Section 3 */}
           <div className="bg-dark-slate-blue/40 w-screen flex items-center flex-col">
             <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
-              <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl">
+              <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl mb-8 lg:mb-10">
                 The schedule
               </div>
               <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
