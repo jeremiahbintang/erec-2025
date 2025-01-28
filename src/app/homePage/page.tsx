@@ -552,11 +552,11 @@ export default function HomePage() {
               <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl mb-8 lg:mb-10">
                 The schedule
               </div>
-              <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
+              <div className="self-start flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
                 {schedules.map((option) => (
                   <div
                     key={option.key}
-                    className={`w-60 h-120 lg:h-200 lg:w-100 shrink-0`}
+                    className={`w-67.5 h-120 lg:w-135 lg:h-240 shrink-0`}
                   >
                     <Image
                       src={option.src}
