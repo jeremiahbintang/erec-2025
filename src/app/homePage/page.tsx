@@ -307,7 +307,7 @@ export default function HomePage() {
                     <div className="h-full">
                       <Image
                         quality={75}
-                        className="object-cover w-30 h-30 rounded-full  mb-4"
+                        className="object-cover w-30 h-30 rounded-full mb-4"
                         src="/speakers/billy.png"
                         alt="seminar"
                         width={1920}
@@ -389,7 +389,7 @@ export default function HomePage() {
                     <Image
                       quality={75}
                       src="/speakers/edward.png"
-                      className={`rounded-full object-cover scale-100`}
+                      className={`rounded-full object-cover scale-150`}
                       alt="edward"
                       fill
                     />
