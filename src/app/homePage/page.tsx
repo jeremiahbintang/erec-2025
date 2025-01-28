@@ -146,6 +146,13 @@ export default function HomePage() {
       price: "60",
     },
   ];
+
+  const schedules = [
+    { key: "day1", src: "/schedule-images/schedule-day1.png" },
+    { key: "day2", src: "/schedule-images/schedule-day2.png" },
+    { key: "day3", src: "/schedule-images/schedule-day3.png" },
+    { key: "day4", src: "/schedule-images/schedule-day4.png" },
+  ];
   return (
     <>
       <div className="w-full flex flex-col items-center">
@@ -536,6 +543,30 @@ export default function HomePage() {
                     13:00 before your departure. Make sure you have your bags
                     ready before this last session."
                 />
+              </div>
+            </div>
+          </div>
+          {/* Section 3 */}
+          <div className="bg-dark-slate-blue/40 w-screen flex items-center flex-col">
+            <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
+              <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl">
+                The schedule
+              </div>
+              <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
+                {schedules.map((option) => (
+                  <div
+                    key={option.key}
+                    className={`w-60 h-120 lg:h-200 lg:w-100 shrink-0`}
+                  >
+                    <Image
+                      src={option.src}
+                      className="w-full h-full"
+                      width={450}
+                      height={800}
+                      alt={option.key}
+                    ></Image>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
