@@ -56,17 +56,17 @@ function RegisterButton() {
 function Time({ hour, minute }: { hour: string; minute: string }) {
   return (
     <div className="flex text-5xl lg:text-6xl gap-2 text-medium">
-      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md flex justify-center items-center">
         {hour[0]}
       </div>
-      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md flex justify-center items-center">
         {hour[1]}
       </div>
       <div>:</div>
-      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md flex justify-center items-center">
         {minute[0]}
       </div>
-      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md">
+      <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md flex justify-center items-center">
         {minute[1]}
       </div>
     </div>
