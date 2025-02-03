@@ -91,10 +91,10 @@ function DateAndDescription({
 export default function HomePage() {
   const [speaker, SetSpeaker] = useState("billy");
   const speakerDescriptions = {
-    billy: `Teaches systematic theology at the International Reformed Evangelical Seminary Jakarta and serves on the World Reformed Fellowship's theological commission. With 24 years of pastoral experience, he's authored "Ajarlah Kami Bertumbuh" and "Sola Dei Gloria." His research spans soteriology, anthropology, spirituality, John Calvin's theology, and J.S. Bach. Find his sermons on the "Sola Dei Gloria" YouTube channel.`,
+    billy: `Teaches systematic theology at the International Reformed Evangelical Seminary Jakarta and serves on the World Reformed Fellowship's theological commission. His research spans soteriology, anthropology, spirituality, John Calvin's theology, and J.S. Bach. He is also running a Youtube channel called "Sola Dei Gloria".`,
     edward: `Rev. Edward Oei is the senior pastor of IREC Medan, a member of IREC Synod Development Board, Secretariat of IREC Central, pastor of Fellowship of Indonesian Reformed Evangelical Students (FIRES), editor in chief of PILLAR (bulletin for Indonesian Reformed Evangelical Church Youth). He holds a Diplom Ingenieur from Technische Universität Berlin and an M.C.S. from International Reformed Evangelical Seminary, Jakarta.`,
-    sutjipto: `Rev. Sutjipto Subeno earned his theological degrees from the International Reformed Evangelical Seminary Jakarta and he is currently working on his Ph.D dissertation in the same institution. He is the pastor GRII Bintaro and MRII Kupang, the Head of Admission and lecturer at the International Reformed Evangelical Seminary Jakarta. He pioneered the establishment of IRECS/SKRII, a theological school for laymen and professionals, and Momentum, a christian literature publishing house.`,
-    leo: `First came to GRII in 2003 while taking his Design Bachelor's Degree at UPH Karawaci. From then on, with the growing urge and calling to serve God as His servant, he continued to serve in youth ministry of GRII Karawaci up until 2012 when he entered STTRII Jakarta. He received his Master of Theology in 2015, and has since served as an assistant pastor; from 2015-2018 in GRII Bintaro, and in 2018-2021 in both GRII Solo and GRII Yogyakarta. At the moment, he is continuing his doctoral study in Theologische Universiteit Apeldoorn, Netherlands.`,
+    sutjipto: `Rev. Sutjipto Subeno earned his theological degrees from the International Reformed Evangelical Seminary Jakarta and he is currently working on his Ph.D dissertation in the same institution. He is the pastor GRII Bintaro and MRII Kupang, the Head of Admission and lecturer at the International Reformed Evangelical Seminary Jakarta.`,
+    leo: `First came to GRII in 2003 while taking his Design Bachelor's Degree at UPH Karawaci. He received his Master of Theology in 2015, and has since served as an assistant pastor; from 2015-2018 in GRII Bintaro, and in 2018-2021 in both GRII Solo and GRII Yogyakarta. At the moment, he is continuing his doctoral study in Theologische Universiteit Apeldoorn, Netherlands.`,
   };
   const speakerNames = {
     billy: `Rev. Billy Kristanto`,
@@ -103,16 +103,16 @@ export default function HomePage() {
     leo: `Vic. Leonardo Chandra`,
   };
   const pricingOptions = [
-    {
-      key: "adult-early",
-      bgColor: "orange",
-      color: "white",
-      title: "Adult",
-      subtitle: "Early bird (Until 31 Jan 2025)",
-      mobileSubtitle: "Early bird",
-      subtitleClass: "font-sans normal-case",
-      price: "195",
-    },
+    // {
+    //   key: "adult-early",
+    //   bgColor: "orange",
+    //   color: "white",
+    //   title: "Adult",
+    //   subtitle: "Early bird (Until 31 Jan 2025)",
+    //   mobileSubtitle: "Early bird",
+    //   subtitleClass: "font-sans normal-case",
+    //   price: "195",
+    // },
     {
       key: "adult",
       bgColor: "dark-slate-blue",
@@ -479,7 +479,7 @@ export default function HomePage() {
               </div>
               <div className="text-base lg:text-xl text-sans mb-6 lg:mb-10 max-w-120">
                 The prices below include accommodation and meals. Towels are
-                available for an additional
+                available for an additional{" "}
                 <span className="inline-block">EUR 1.50</span>.
               </div>
               <div className="flex flex-row w-[calc(100%+20px)] lg:w-[calc(100%+40px)] flex-nowrap overflow-x-scroll gap-5 text-white">
