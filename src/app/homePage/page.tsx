@@ -494,16 +494,12 @@ export default function HomePage() {
                           {option.title}
                         </div>
                         <div
-                          className={`${
-                            option.subtitleClass || "font-serif uppercase"
-                          } text-base lg:text-2xl font-normal lg:font-medium leading-none`}
+                          className={`${"font-serif uppercase"} text-base lg:text-2xl font-normal lg:font-medium leading-none`}
                         >
                           <div className="hidden lg:block">
                             {option.subtitle}
                           </div>
-                          <div className="lg:hidden">
-                            {option.mobileSubtitle || option.subtitle}
-                          </div>
+                          <div className="lg:hidden">{option.subtitle}</div>
                         </div>
                       </div>
                     </div>
