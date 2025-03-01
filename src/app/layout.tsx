@@ -3,10 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
-import "@mantine/carousel/styles.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 import styles from "./page.module.css";
 import NavBar from "@/app/components/navbar";
@@ -48,15 +48,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={inter.className}>{children}</body> */}
-      <head>{/* <ColorSchemeScript /> */}</head>
+      <head>
+        <ColorSchemeScript />
+      </head>
       <GoogleTagManager gtmId="GTM-M6M3VWFH" />
 
       <body className={styles.page}>
-        {/* <MantineProvider> */}
-        <NavBar />
-        {children}
-        <Footer />
-        {/* </MantineProvider> */}
+        <MantineProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </MantineProvider>
         <Analytics />
         <SpeedInsights />
       </body>

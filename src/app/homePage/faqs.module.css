@@ -1,0 +1,74 @@
+.accordionItem {
+  border: 0;
+  margin-bottom: 32px;
+}
+
+.accordionControl {
+  align-items: flex-start;
+}
+
+.accordionControl:hover {
+  background-color: transparent;
+}
+
+.accordionLabel {
+  font-size: 24px; /* 24 normal size */
+  letter-spacing: 0.02em;
+  line-height: 32px; /* 32 normal size */
+  font-weight: 500;
+  font-family: Poppins;
+  color: var(--color-white);
+  padding: 0;
+}
+
+.accordionContent {
+  font-size: 20px; /* 20 normal size */
+  letter-spacing: 0.02em;
+  line-height: 40px; /* 40 normal size */
+  font-family: Poppins;
+  color: var(--color-white);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 47px;
+}
+
+.accordionChevron {
+  height: 24px;
+  color: var(--color-white);
+}
+
+/* Mobile & Smaller screen */
+@media screen and (max-width: 1080px) {
+  .accordionItem{
+    margin-bottom: 24px;
+  }
+
+  .accordionControl:hover {
+    background-color: unset;
+  }
+
+  .accordionLabel {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: Poppins;
+    color: var(--color-white);
+  }
+
+  .accordionContent {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 24px;
+    font-family: Poppins;
+    color: var(--color-white);
+    padding-top: 8px;
+    padding-bottom: 0px;
+  }
+
+  .accordionChevron {
+    height: 24px;
+    color: var(--color-white);
+  }
+
+}

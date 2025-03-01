@@ -15,6 +15,7 @@
     "@mantine/core": "^7.3.2",
     "@mantine/hooks": "^7.3.2",
     "@next/third-parties": "^15.1.6",
+    "@svgr/webpack": "^8.1.0",
     "@tabler/icons-react": "^2.45.0",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",

@@ -8,6 +8,14 @@ const nextConfig = {
   images: {
     unoptimized: true, // For static exports, images must be unoptimized
   },
+  webpack(config) {
+    config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    });
+
+    return config;
+  },
 }
 
 module.exports = nextConfig

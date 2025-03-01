@@ -1,8 +1,8 @@
 "use client";
 import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 import Image from "next/image";
-import styles from "./homePage.module.css";
 import { useState } from "react";
+import FAQs from "./faqs";
 
 const customEventCarouselTheme: CustomFlowbiteTheme["carousel"] = {
   root: {
@@ -55,7 +55,7 @@ function RegisterButton() {
 
 function Time({ hour, minute }: { hour: string; minute: string }) {
   return (
-    <div className="flex text-5xl lg:text-6xl gap-2 text-medium">
+    <div className="flex text-5xl lg:text-6xl gap-2 font-medium">
       <div className="w-12 lg:w-16 h-20 lg:h-25 bg-very-light-gray rounded-md flex justify-center items-center">
         {hour[0]}
       </div>
@@ -83,7 +83,7 @@ function DateAndDescription({
   return (
     <div className="flex flex-col items-start gap-2">
       <div className="text-2xl lg:text-3xl font-medium">{date}</div>
-      <div className="text-left">{description}</div>
+      <div className="text-left leading-8">{description}</div>
     </div>
   );
 }
@@ -298,7 +298,7 @@ export default function HomePage() {
             </div>
             <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-col lg:gap-20 xl:gap-0 xl:flex-row lg:items-start xl:items-center lg:justify-between mb-12 lg:mb-30">
               <div className="text-white w-full lg:w-105">
-                <div className="font-medium text-3xl lg:text-6xl leading-tight mb-4 lg:mb-8">
+                <div className="font-medium font-sans text-3xl lg:text-6xl leading-none mb-4 lg:mb-8">
                   Get to know some of
                   <span className="inline-block">the speakers</span>
                 </div>
@@ -440,7 +440,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="relative hidden lg:block">
+              <div className="relative hidden lg:block font-sans">
                 <div className="relative w-120 h-160 bg-white rounded-2xl z-10 text-dark-slate-blue p-10">
                   <div className="w-50 h-50 relative rounded-full overflow-hidden mb-10">
                     <Image
@@ -460,7 +460,7 @@ export default function HomePage() {
                       ? speakerNames.sutjipto
                       : speakerNames.leo}
                   </div>
-                  <div>
+                  <div className="leading-[1.875]">
                     {speaker == "billy"
                       ? speakerDescriptions.billy
                       : speaker == "edward"
@@ -474,10 +474,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="text-dark-slate-blue w-full mb-18 lg:mb-40">
-              <div className="text-3xl lg:text-4xl font-medium text-sans mb-2">
+              <div className="text-3xl lg:text-4xl font-medium font-sans mb-2">
                 Pricing
               </div>
-              <div className="text-base lg:text-xl text-sans mb-6 lg:mb-10 max-w-120">
+              <div className="text-base lg:text-xl font-sans mb-6 lg:mb-10 max-w-120 leading-loose">
                 The prices below include accommodation and meals. Towels are
                 available for an additional{" "}
                 <span className="inline-block">EUR 1.50</span>.
@@ -515,11 +515,11 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="text-center text-dark-slate-blue">
-              <div className="text-3xl lg:text-6xl font-medium">
+            <div className="text-center text-dark-slate-blue font-sans">
+              <div className="text-3xl lg:text-6xl font-medium lg:leading-tight mb-2">
                 All set for the trip?
               </div>
-              <div className="lg:text-2xl mb-16 lg:mb-30">
+              <div className="lg:text-2xl mb-16 lg:mb-30 lg:leading-10">
                 Here are the important timings
                 <br />
                 you will need to know to book your trip.
@@ -543,7 +543,7 @@ export default function HomePage() {
             </div>
           </div>
           {/* Section 3 */}
-          <div className="bg-dark-slate-blue/40 w-screen flex items-center flex-col">
+          <div className="hidden bg-dark-slate-blue/40 w-screen flex items-center flex-col">
             <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
               <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl mb-8 lg:mb-10">
                 The schedule
@@ -564,6 +564,15 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          {/* Section 4 */}
+          <div className="bg-dark-slate-blue w-screen flex items-center flex-col">
+            <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
+              <div className="text-white font-medium text-3xl lg:text-4xl mb-8 lg:mb-30">
+                Frequently asked questions
+              </div>
+              <FAQs />
             </div>
           </div>
         </div>
