@@ -40,16 +40,22 @@ const customSpeakersCarouselTheme: CustomFlowbiteTheme["carousel"] = {
   },
 };
 
-function RegisterButton() {
+function RegisterButton({ center, color }: { center: boolean; color: string }) {
   return (
-    <a
-      id="register-button"
-      href="https://bit.ly/EREC2025"
-      target="_blank"
-      className="w-fit text-xs lg:text-xl bg-orange px-6 lg:px-10 h-10 lg:h-16 uppercase text-white font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
-    >
-      Register Now
-    </a>
+    <div className={center ? "flex-col flex justify-center items-center" : ""}>
+      <a
+        id="register-button"
+        href="https://bit.ly/EREC2025"
+        target="_blank"
+        className="w-fit text-xs lg:text-xl bg-orange px-6 lg:px-10 h-10 lg:h-16 uppercase text-white font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
+      >
+        Join Waiting List
+      </a>
+      <div className={`${color} ${center && "text-center"} font-sans`}>
+        We have maxed out our capacity.
+        <br /> Once a spot becomes available, we will inform you further.
+      </div>
+    </div>
   );
 }
 
@@ -164,7 +170,8 @@ export default function HomePage() {
                 <div className="text-xl lg:text-5xl">The Gift of</div>
                 <div className="text-3xl lg:text-7xl">Perseverance</div>
               </div>
-              <RegisterButton />
+              <RegisterButton center color="text-white" />
+              <div></div>
             </div>
           </div>
         </div>
@@ -293,7 +300,7 @@ export default function HomePage() {
                   ensuring that your faith remains strong and impactful in your
                   everyday life. Join us and register now!
                 </div>
-                <RegisterButton />
+                <RegisterButton color="text-slate-blue" />
               </div>
             </div>
             <div className="bg-dark-slate-blue rounded-2xl w-full px-5 lg:px-28 pt-10 lg:py-20 lg:flex lg:flex-col lg:gap-20 xl:gap-0 xl:flex-row lg:items-start xl:items-center lg:justify-between mb-12 lg:mb-30">
