@@ -40,7 +40,13 @@ const customSpeakersCarouselTheme: CustomFlowbiteTheme["carousel"] = {
   },
 };
 
-function RegisterButton({ center, color }: { center: boolean; color: string }) {
+function RegisterButton({
+  center,
+  color,
+}: {
+  center?: boolean;
+  color?: string;
+}) {
   return (
     <div className={center ? "flex-col flex justify-center items-center" : ""}>
       <a
