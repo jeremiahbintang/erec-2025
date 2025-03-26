@@ -177,7 +177,6 @@ export default function HomePage() {
                 <div className="text-3xl lg:text-7xl">Perseverance</div>
               </div>
               <RegisterButton center color="text-white" />
-              <div></div>
             </div>
           </div>
         </div>
@@ -556,7 +555,7 @@ export default function HomePage() {
             </div>
           </div>
           {/* Section 3 */}
-          <div className="hidden bg-dark-slate-blue/40 w-screen flex items-center flex-col">
+          <div className="bg-dark-slate-blue/40 w-screen flex items-center flex-col">
             <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
               <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl mb-8 lg:mb-10">
                 The schedule
