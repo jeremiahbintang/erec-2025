@@ -267,7 +267,10 @@ export default function HomePage() {
           </div>
         </div>
         {/* Section 3 */}
-        <div className="bg-white w-screen flex items-center flex-col">
+        <div
+          id="about"
+          className="bg-white w-screen flex items-center flex-col"
+        >
           <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
             <div className="text-dark-slate-blue max-w-2xl text-center mb-16 lg:mb-40">
               <div className="text-2xl lg:text-5xl leading-none font-bold lg:font-semibold font-serif uppercase">
@@ -555,7 +558,10 @@ export default function HomePage() {
             </div>
           </div>
           {/* Section 3 */}
-          <div className="bg-dark-slate-blue/40 w-screen flex items-center flex-col">
+          <div
+            id="schedule"
+            className="bg-dark-slate-blue/40 w-screen flex items-center flex-col"
+          >
             <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
               <div className="text-dark-slate-blue font-medium text-3xl lg:text-4xl mb-8 lg:mb-10">
                 The schedule
@@ -579,7 +585,10 @@ export default function HomePage() {
             </div>
           </div>
           {/* Section 4 */}
-          <div className="bg-dark-slate-blue w-screen flex items-center flex-col">
+          <div
+            id="faq"
+            className="bg-dark-slate-blue w-screen flex items-center flex-col"
+          >
             <div className="max-w-8xl w-screen px-5 lg:px-10 pt-10 pb-16 lg:py-32 flex items-center flex-col">
               <div className="text-white font-medium text-3xl lg:text-4xl mb-8 lg:mb-30">
                 Frequently asked questions
