@@ -51,15 +51,15 @@ function RegisterButton({
     <div className={center ? "flex-col flex justify-center items-center" : ""}>
       <a
         id="register-button"
-        href="https://bit.ly/EREC2025"
+        href="javascript: void(0)"
         target="_blank"
         className="w-fit text-xs lg:text-xl bg-orange px-6 lg:px-10 h-10 lg:h-16 uppercase text-white font-sans font-bold tracking-widest rounded-full flex justify-center items-center"
       >
-        Join Waiting List
+        Registration Closed
       </a>
       <div className={`${color} ${center && "text-center"} font-sans`}>
-        We have maxed out our capacity.
-        <br /> Once a spot becomes available, we will inform you further.
+        We have closed our registration.
+        <br /> Please look forward for EREC 2026 :)
       </div>
     </div>
   );
